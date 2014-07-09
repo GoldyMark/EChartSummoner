@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import cn.nh121.echarts.core.EColor;
 import cn.nh121.echarts.style.TextStyle;
+import cn.nh121.echarts.style.TextStyle.EHorizontalAlign;
+import cn.nh121.echarts.toolbox.feature.Feature;
 
 public class Toolbox
 {
@@ -203,5 +205,275 @@ public class Toolbox
      * }
      */
     private Feature           feature;
+
+    public Toolbox()
+    {
+        this.color = new ArrayList<EColor>();
+    }
+
+    /**
+     * @return the show
+     */
+    public Boolean getShow()
+    {
+        return show;
+    }
+
+    /**
+     * @param show
+     *            the show to set
+     */
+    public Toolbox setShow(Boolean show)
+    {
+        this.show = show;
+        return this;
+    }
+
+    /**
+     * @return the orient
+     */
+    public ELayout getOrient()
+    {
+        return orient;
+    }
+
+    /**
+     * @param orient
+     *            the orient to set
+     */
+    public Toolbox setOrient(ELayout orient)
+    {
+        this.orient = orient;
+        return this;
+    }
+
+    /**
+     * @return the x
+     */
+    public Object getX()
+    {
+        return x;
+    }
+
+    /**
+     * @param x
+     *            the x to set
+     */
+    public Toolbox setX(Object x)
+    {
+        if (x instanceof EHorizontalAlign)
+            this.x = ((EHorizontalAlign) x).name();
+        else if (x instanceof Number)
+            this.x = ((Number) x).intValue();
+        return this;
+    }
+
+    /**
+     * @return the y
+     */
+    public Object getY()
+    {
+        return y;
+    }
+
+    /**
+     * @param y
+     *            the y to set
+     */
+    public Toolbox setY(Object y)
+    {
+        if (y instanceof EHorizontalAlign)
+            this.y = ((EHorizontalAlign) y).name();
+        else if (y instanceof Number)
+            this.y = ((Number) y).intValue();
+        return this;
+    }
+
+    /**
+     * @return the backgroundColor
+     */
+    public EColor getBackgroundColor()
+    {
+        return backgroundColor;
+    }
+
+    /**
+     * @param backgroundColor
+     *            the backgroundColor to set
+     */
+    public Toolbox setBackgroundColor(EColor backgroundColor)
+    {
+        this.backgroundColor = backgroundColor;
+        return this;
+    }
+
+    /**
+     * @return the borderColor
+     */
+    public EColor getBorderColor()
+    {
+        return borderColor;
+    }
+
+    /**
+     * @param borderColor
+     *            the borderColor to set
+     */
+    public Toolbox setBorderColor(EColor borderColor)
+    {
+        this.borderColor = borderColor;
+        return this;
+    }
+
+    /**
+     * @return the borderWidth
+     */
+    public Integer getBorderWidth()
+    {
+        return borderWidth;
+    }
+
+    /**
+     * @param borderWidth
+     *            the borderWidth to set
+     */
+    public Toolbox setBorderWidth(Integer borderWidth)
+    {
+        this.borderWidth = borderWidth;
+        return this;
+    }
+
+    /**
+     * @return the padding
+     */
+    public String getPadding()
+    {
+        return padding;
+    }
+
+    /**
+     * @param padding
+     *            the padding to set<br>
+     *            CSS style
+     */
+    public Toolbox setPadding(String padding)
+    {
+        this.padding = padding;
+        return this;
+    }
+
+    /**
+     * @return the itemGap
+     */
+    public Integer getItemGap()
+    {
+        return itemGap;
+    }
+
+    /**
+     * @param itemGap
+     *            the itemGap to set
+     */
+    public Toolbox setItemGap(Integer itemGap)
+    {
+        this.itemGap = itemGap;
+        return this;
+    }
+
+    /**
+     * @return the itemSize
+     */
+    public Integer getItemSize()
+    {
+        return itemSize;
+    }
+
+    /**
+     * @param itemSize
+     *            the itemSize to set
+     */
+    public Toolbox setItemSize(Integer itemSize)
+    {
+        this.itemSize = itemSize;
+        return this;
+    }
+
+    /**
+     * @return the color
+     */
+    public ArrayList<EColor> getColor()
+    {
+        return color;
+    }
+
+    /**
+     * @param color
+     *            the color to set
+     */
+    public Toolbox setColor(ArrayList<EColor> color)
+    {
+        this.color = color;
+        return this;
+    }
+
+    public Toolbox addColor(EColor color)
+    {
+        this.color.add(color);
+        return this;
+    }
+
+    /**
+     * @return the showTitle
+     */
+    public Boolean getShowTitle()
+    {
+        return showTitle;
+    }
+
+    /**
+     * @param showTitle
+     *            the showTitle to set
+     */
+    public Toolbox setShowTitle(Boolean showTitle)
+    {
+        this.showTitle = showTitle;
+        return this;
+    }
+
+    /**
+     * @return the textStyle
+     */
+    public TextStyle getTextStyle()
+    {
+        return textStyle;
+    }
+
+    /**
+     * @param textStyle
+     *            the textStyle to set
+     */
+    public Toolbox setTextStyle(TextStyle textStyle)
+    {
+        this.textStyle = textStyle;
+        return this;
+    }
+
+    /**
+     * @return the feature
+     */
+    public Feature getFeature()
+    {
+        return feature;
+    }
+
+    /**
+     * @param feature
+     *            the feature to set
+     */
+    public Toolbox setFeature(Feature feature)
+    {
+        this.feature = feature;
+        return this;
+    }
 
 }
