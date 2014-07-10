@@ -1,6 +1,10 @@
 package cn.nh121.echarts.style;
 
 import cn.nh121.echarts.core.EColor;
+import cn.nh121.echarts.pubenum.EFontStyle;
+import cn.nh121.echarts.pubenum.EFontWeight;
+import cn.nh121.echarts.pubenum.EHorizontalAlign;
+import cn.nh121.echarts.pubenum.EVerticalAlign;
 
 public class TextStyle
 {
@@ -220,24 +224,25 @@ public class TextStyle
         return this;
     }
 
-    public enum EHorizontalAlign
-    {
-        LEFT, RIGHT, CENTER
-    }
+    // public enum EHorizontalAlign
+    // {
+    // LEFT, RIGHT, CENTER
+    // }
 
-    public enum EVerticalAlign
-    {
-        TOP, BOTTOM, MIDDLE
-    }
-
-    public enum EFontStyle
-    {
-        NORMAL, ITALIC, OBLIQUE
-    }
-
-    // TODO problem
-    public enum EFontWeight
-    {
-        NORMAL, BOLD, BOLDER, LIGHTER, _100, _200, _300, _400, _500, _600, _700, _800, _900;
-    }
+    // public enum EVerticalAlign
+    // {
+    // TOP, BOTTOM, MIDDLE
+    // }
+    //
+    // public enum EFontStyle
+    // {
+    // NORMAL, ITALIC, OBLIQUE
+    // }
+    //
+    // // TODO problem
+    // public enum EFontWeight
+    // {
+    // NORMAL, BOLD, BOLDER, LIGHTER, _100, _200, _300, _400, _500, _600, _700,
+    // _800, _900;
+    // }
 }

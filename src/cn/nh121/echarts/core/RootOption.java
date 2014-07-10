@@ -5,8 +5,13 @@ package cn.nh121.echarts.core;
 
 import java.util.ArrayList;
 
+import cn.nh121.echarts.datarange.DataRange;
+import cn.nh121.echarts.datazoom.DataZoom;
+import cn.nh121.echarts.grid.Grid;
+import cn.nh121.echarts.legend.Legend;
 import cn.nh121.echarts.timeline.Timeline;
 import cn.nh121.echarts.toolbox.Toolbox;
+import cn.nh121.echarts.tooltip.Tooltip;
 
 /**
  * @author ODMark

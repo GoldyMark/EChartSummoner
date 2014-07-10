@@ -3,10 +3,17 @@ package cn.nh121.echarts.toolbox;
 import java.util.ArrayList;
 
 import cn.nh121.echarts.core.EColor;
+import cn.nh121.echarts.pubenum.EHorizontalAlign;
+import cn.nh121.echarts.pubenum.EOrient;
 import cn.nh121.echarts.style.TextStyle;
-import cn.nh121.echarts.style.TextStyle.EHorizontalAlign;
 import cn.nh121.echarts.toolbox.feature.Feature;
 
+/**
+ * 
+ * @author ODMark
+ * @creation 2014-7-10
+ * @link http://echarts.baidu.com/doc/doc.html#Toolbox
+ */
 public class Toolbox
 {
     /**
@@ -25,7 +32,7 @@ public class Toolbox
      * 默认值：
      * 'horizontal'
      */
-    private ELayout           orient;
+    private EOrient           orient;
 
     /**
      * 说明：
@@ -232,7 +239,7 @@ public class Toolbox
     /**
      * @return the orient
      */
-    public ELayout getOrient()
+    public EOrient getOrient()
     {
         return orient;
     }
@@ -241,7 +248,7 @@ public class Toolbox
      * @param orient
      *            the orient to set
      */
-    public Toolbox setOrient(ELayout orient)
+    public Toolbox setOrient(EOrient orient)
     {
         this.orient = orient;
         return this;

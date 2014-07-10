@@ -13,6 +13,7 @@ import cn.nh121.echarts.toolbox.feature.Mark;
 import cn.nh121.echarts.toolbox.feature.Restore;
 import cn.nh121.echarts.toolbox.feature.SaveAsImage;
 import cn.nh121.echarts.toolbox.feature.SaveAsImage.EImageType;
+import cn.nh121.echarts.tooltip.Tooltip;
 
 import com.alibaba.fastjson.JSON;
 
@@ -34,7 +35,7 @@ public class JSFunctionKit
         return String.format(template, argStr, body);
     }
 
-    public static void main(String[] args)
+    public static void main2(String[] args)
     {
         Feature feature = new Feature();
         Mark mark = new Mark();
@@ -76,5 +77,15 @@ public class JSFunctionKit
         saveAsImage.setLang("保存");
         feature.setSaveAsImage(saveAsImage);
         System.out.println(JSON.toJSONString(feature));
+    }
+
+    public static void main(String[] args)
+    {
+        Tooltip tooltip = new Tooltip();
+        // tooltip.setPosition(new JSFunction("alert(\"WTF\")", "a", "b", "c"));
+        String[] s = { "AAA", "BBB", "CCC" };
+        Integer[] i = { 1, 2, 3 };
+        tooltip.setPosition(i);
+        System.out.println(JSON.toJSONString(tooltip));
     }
 }

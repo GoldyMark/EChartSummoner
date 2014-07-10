@@ -4,12 +4,13 @@
 package cn.nh121.echarts.title;
 
 import cn.nh121.echarts.core.EColor;
+import cn.nh121.echarts.pubenum.EHorizontalAlign;
 import cn.nh121.echarts.style.TextStyle;
-import cn.nh121.echarts.style.TextStyle.EHorizontalAlign;
 
 /**
  * @author ODMark
  * @creation 2014-7-8
+ * @link http://echarts.baidu.com/doc/doc.html#Title
  */
 public class Title
 {
