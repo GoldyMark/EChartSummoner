@@ -10,6 +10,7 @@ import cn.nh121.echarts.datazoom.DataZoom;
 import cn.nh121.echarts.grid.Grid;
 import cn.nh121.echarts.legend.Legend;
 import cn.nh121.echarts.timeline.Timeline;
+import cn.nh121.echarts.title.Title;
 import cn.nh121.echarts.toolbox.Toolbox;
 import cn.nh121.echarts.tooltip.Tooltip;
 

@@ -13,7 +13,6 @@ import cn.nh121.echarts.toolbox.feature.Mark;
 import cn.nh121.echarts.toolbox.feature.Restore;
 import cn.nh121.echarts.toolbox.feature.SaveAsImage;
 import cn.nh121.echarts.toolbox.feature.SaveAsImage.EImageType;
-import cn.nh121.echarts.tooltip.Tooltip;
 
 import com.alibaba.fastjson.JSON;
 
@@ -81,11 +80,10 @@ public class JSFunctionKit
 
     public static void main(String[] args)
     {
-        Tooltip tooltip = new Tooltip();
-        // tooltip.setPosition(new JSFunction("alert(\"WTF\")", "a", "b", "c"));
-        String[] s = { "AAA", "BBB", "CCC" };
-        Integer[] i = { 1, 2, 3 };
-        tooltip.setPosition(i);
-        System.out.println(JSON.toJSONString(tooltip));
+        // Polar polar = new Polar();
+        // // Object[] objs = { "A", "B" };
+        // Object[] objs = { new Date(), new Date() };
+        // polar.setCenter(objs);
+        IntegerRangeCheckKit.checkMin(-99, 0, true);
     }
 }
