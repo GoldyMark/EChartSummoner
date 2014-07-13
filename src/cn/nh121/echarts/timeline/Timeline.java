@@ -6,8 +6,8 @@ package cn.nh121.echarts.timeline;
 import java.util.ArrayList;
 
 import cn.nh121.echarts.core.EColor;
+import cn.nh121.echarts.pubenum.ESymbol;
 import cn.nh121.echarts.style.LineStyle;
-import cn.nh121.echarts.symbol.ESymbol;
 
 /**
  * @author ODMark

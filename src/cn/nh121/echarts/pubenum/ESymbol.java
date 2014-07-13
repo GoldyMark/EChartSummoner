@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cn.nh121.echarts.symbol;
+package cn.nh121.echarts.pubenum;
 
 /**
  * @author ODMark

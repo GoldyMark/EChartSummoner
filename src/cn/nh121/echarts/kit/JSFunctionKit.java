@@ -2,6 +2,7 @@ package cn.nh121.echarts.kit;
 
 import cn.nh121.echarts.core.EColor;
 import cn.nh121.echarts.core.JSFunction;
+import cn.nh121.echarts.series.MapMarkPointData;
 import cn.nh121.echarts.style.LineStyle;
 import cn.nh121.echarts.style.LineStyle.ELineType;
 import cn.nh121.echarts.toolbox.feature.DataView;
@@ -84,6 +85,8 @@ public class JSFunctionKit
         // // Object[] objs = { "A", "B" };
         // Object[] objs = { new Date(), new Date() };
         // polar.setCenter(objs);
-        IntegerRangeCheckKit.checkMin(-99, 0, true);
+        MapMarkPointData mmpd = new MapMarkPointData("fs", 113.7);
+        System.out.println(mmpd.getName());
+        System.out.println(mmpd.getValue());
     }
 }
