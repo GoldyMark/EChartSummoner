@@ -3,34 +3,14 @@
  */
 package cn.nh121.echarts.series;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author ODMark
  * @creation 2014-7-13
  */
 public class MarkLineData
 {
-    private Object              result;
-    private Object[]            array = new Object[2];
-    private Map<String, Object> map   = new HashMap<String, Object>();
-
-    public MarkLineData(EChartType chartType)
-    {
-
-    }
-
-    private enum EChartType
-    {
-        XY_CHART, FLAT_CHART, MAP_CHART;
-    }
-
-    public MarkLineData setName(String name)
-    {
-        map.put("name", name);
-        return this;
-    }
+    private Object   result;
+    private Object[] results = new Object[2];
 
     // 饼图、雷达图、力导、和弦图
     // [{name,value,x,y},{name,x,y}]
@@ -43,40 +23,51 @@ public class MarkLineData
     // {name,type,valueIndex}
     // 地图
     // [{name,value},{name}]
-    protected Map<String, Object> getMap()
+
+    public MarkLineData(String name, EMarkLineType type)
     {
-        return map;
+        result = new XYMarkLineSubData(name, type);
+    }
+
+    public MarkLineData(String beginName, EMarkLineType beginType, String endName, EMarkLineType endType)
+    {
+        results[0] = new XYMarkLineSubData(beginName, beginType);
+        results[1] = new XYMarkLineSubData(endName, endType);
+        result = results;
+    }
+
+    public MarkLineData(String name, EMarkLineType type, Integer valueIndex)
+    {
+        result = new XYMarkLineSubData(name, type, valueIndex);
+    }
+
+    public MarkLineData(String beginName, Number beginValue, Object beginXAxis, Object beginYAxis, String endName, Object endXAxis, Object endYAxis)
+    {
+        results[0] = new XYMarkLineSubData(beginName, beginValue, beginXAxis, beginYAxis);
+        results[1] = new XYMarkLineSubData(endName, endXAxis, endYAxis);
+        result = results;
+    }
+
+    public MarkLineData(String beginName, Number beginValue, Integer beginX, Integer beginY, String endName, Integer endX, Integer endY)
+    {
+        results[0] = new FlatMarkLineSubData(beginName, beginValue, beginX, beginY);
+        results[1] = new FlatMarkLineSubData(endName, endX, endY);
+        result = results;
+    }
+
+    public MarkLineData(String beginName, Number beginValue, String endName)
+    {
+        results[0] = new MapMarkLineSubData(beginName, beginValue);
+        results[1] = new MapMarkLineSubData(endName);
+        result = results;
+    }
+
+    public Object getResult()
+    {
+        return result;
     }
 
     // SubData负责生成{name,value,x,y}etc..
     // AMarkLineData负责生成[SubData]或SubData
-    private abstract class SubData
-    {
-        private String name;
-
-        public SubData(String name)
-        {
-            this.name = name;
-        }
-
-        /**
-         * @return the name
-         */
-        public String getName()
-        {
-            return name;
-        }
-
-        /**
-         * @param name
-         *            the name to set
-         */
-        public SubData setName(String name)
-        {
-            this.name = name;
-            return this;
-        }
-
-    }
 
 }

@@ -1,8 +1,12 @@
 package cn.nh121.echarts.kit;
 
+import java.util.ArrayList;
+
 import cn.nh121.echarts.core.EColor;
 import cn.nh121.echarts.core.JSFunction;
-import cn.nh121.echarts.series.MapMarkPointData;
+import cn.nh121.echarts.series.EMarkLineType;
+import cn.nh121.echarts.series.MarkLine;
+import cn.nh121.echarts.series.MarkLineData;
 import cn.nh121.echarts.style.LineStyle;
 import cn.nh121.echarts.style.LineStyle.ELineType;
 import cn.nh121.echarts.toolbox.feature.DataView;
@@ -85,8 +89,18 @@ public class JSFunctionKit
         // // Object[] objs = { "A", "B" };
         // Object[] objs = { new Date(), new Date() };
         // polar.setCenter(objs);
-        MapMarkPointData mmpd = new MapMarkPointData("fs", 113.7);
-        System.out.println(mmpd.getName());
-        System.out.println(mmpd.getValue());
+        MarkLine markLine = new MarkLine();
+        ArrayList<MarkLineData> data = new ArrayList<MarkLineData>();
+        MarkLineData d1 = new MarkLineData("d1", EMarkLineType.AVERAGE);
+        MarkLineData d2 = new MarkLineData("d2", EMarkLineType.MAX, 20);
+        MarkLineData d3 = new MarkLineData("d3Begin", 113.7, "d3End");
+        MarkLineData d4 = new MarkLineData("d4Begin", EMarkLineType.MIN, "d4End", EMarkLineType.MAX);
+        MarkLineData d5 = new MarkLineData("d5Begin", 113.7, 20, 100, "d5End", 80, 200);
+        MarkLineData d6 = new MarkLineData("d6Begin", 113.7, "周三", "2", "d6End", "周五", "3");
+        data.add(d1);
+        data.add(d2);
+        data.add(d3);
+        markLine.setData(data);
+        System.out.println(JSON.toJSONString(data));
     }
 }

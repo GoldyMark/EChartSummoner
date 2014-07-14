@@ -24,7 +24,7 @@ public class MarkLine
      * 默认值：
      * FALSE
      */
-    private Boolean                  smooth;
+    private Boolean                 smooth;
 
     /**
      * 说明：
@@ -33,7 +33,7 @@ public class MarkLine
      * 默认值：
      * ['circle', 'arrow']
      */
-    private ArrayList<ESymbol>       symbol;
+    private ESymbol[]               symbol;
 
     /**
      * 说明：
@@ -42,7 +42,7 @@ public class MarkLine
      * 默认值：
      * [2, 4]
      */
-    private ArrayList<Object>        symbolSize;
+    private Object[]                symbolSize;
 
     /**
      * 说明：
@@ -51,7 +51,7 @@ public class MarkLine
      * 默认值：
      * null
      */
-    private ArrayList<Integer>       symbolRotate;
+    private Integer[]               symbolRotate;
 
     /**
      * 说明：
@@ -73,7 +73,7 @@ public class MarkLine
      * shadowBlur : null
      * }
      */
-    private SeriesEffect             effect;
+    private SeriesEffect            effect;
 
     /**
      * 说明：
@@ -82,7 +82,7 @@ public class MarkLine
      * 默认值：
      * {...}
      */
-    private ItemStyle                itemStyle;
+    private ItemStyle               itemStyle;
 
     /**
      * 说明：
@@ -91,7 +91,7 @@ public class MarkLine
      * 默认值：
      * {}
      */
-    private GeoCoord                 geoCoord;
+    private GeoCoord                geoCoord;
 
     /**
      * 说明：
@@ -101,4 +101,148 @@ public class MarkLine
      * []
      */
     private ArrayList<MarkLineData> data;
+
+    /**
+     * @return the smooth
+     */
+    public Boolean getSmooth()
+    {
+        return smooth;
+    }
+
+    /**
+     * @param smooth
+     *            the smooth to set
+     */
+    public MarkLine setSmooth(Boolean smooth)
+    {
+        this.smooth = smooth;
+        return this;
+    }
+
+    /**
+     * @return the symbol
+     */
+    public ESymbol[] getSymbol()
+    {
+        return symbol;
+    }
+
+    /**
+     * @param symbol
+     *            the symbol to set
+     */
+    public MarkLine setSymbol(ESymbol[] symbol)
+    {
+        this.symbol = symbol;
+        return this;
+    }
+
+    /**
+     * @return the symbolSize
+     */
+    public Object[] getSymbolSize()
+    {
+        return symbolSize;
+    }
+
+    /**
+     * @param symbolSize
+     *            the symbolSize to set
+     */
+    public MarkLine setSymbolSize(Object[] symbolSize)
+    {
+        this.symbolSize = symbolSize;
+        return this;
+    }
+
+    /**
+     * @return the symbolRotate
+     */
+    public Integer[] getSymbolRotate()
+    {
+        return symbolRotate;
+    }
+
+    /**
+     * @param symbolRotate
+     *            the symbolRotate to set
+     */
+    public MarkLine setSymbolRotate(Integer[] symbolRotate)
+    {
+        this.symbolRotate = symbolRotate;
+        return this;
+    }
+
+    /**
+     * @return the effect
+     */
+    public SeriesEffect getEffect()
+    {
+        return effect;
+    }
+
+    /**
+     * @param effect
+     *            the effect to set
+     */
+    public MarkLine setEffect(SeriesEffect effect)
+    {
+        this.effect = effect;
+        return this;
+    }
+
+    /**
+     * @return the itemStyle
+     */
+    public ItemStyle getItemStyle()
+    {
+        return itemStyle;
+    }
+
+    /**
+     * @param itemStyle
+     *            the itemStyle to set
+     */
+    public MarkLine setItemStyle(ItemStyle itemStyle)
+    {
+        this.itemStyle = itemStyle;
+        return this;
+    }
+
+    /**
+     * @return the geoCoord
+     */
+    public GeoCoord getGeoCoord()
+    {
+        return geoCoord;
+    }
+
+    /**
+     * @param geoCoord
+     *            the geoCoord to set
+     */
+    public MarkLine setGeoCoord(GeoCoord geoCoord)
+    {
+        this.geoCoord = geoCoord;
+        return this;
+    }
+
+    /**
+     * @return the data
+     */
+    public ArrayList<MarkLineData> getData()
+    {
+        return data;
+    }
+
+    /**
+     * @param data
+     *            the data to set
+     */
+    public MarkLine setData(ArrayList<MarkLineData> data)
+    {
+        this.data = data;
+        return this;
+    }
 }
