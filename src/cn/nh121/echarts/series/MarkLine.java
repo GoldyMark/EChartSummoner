@@ -100,5 +100,5 @@ public class MarkLine
      * 默认值：
      * []
      */
-    private ArrayList<AMarkLineData> data;
+    private ArrayList<MarkLineData> data;
 }
