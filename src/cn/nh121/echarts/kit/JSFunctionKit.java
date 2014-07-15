@@ -7,6 +7,7 @@ import cn.nh121.echarts.core.JSFunction;
 import cn.nh121.echarts.series.EMarkLineType;
 import cn.nh121.echarts.series.MarkLine;
 import cn.nh121.echarts.series.MarkLineData;
+import cn.nh121.echarts.series.XYMarkLineSubData;
 import cn.nh121.echarts.style.LineStyle;
 import cn.nh121.echarts.style.LineStyle.ELineType;
 import cn.nh121.echarts.toolbox.feature.DataView;
@@ -91,16 +92,34 @@ public class JSFunctionKit
         // polar.setCenter(objs);
         MarkLine markLine = new MarkLine();
         ArrayList<MarkLineData> data = new ArrayList<MarkLineData>();
+        ArrayList<Object> data2 = new ArrayList<Object>();
+        // 折线、柱形、散点图
+        // {name,type}
         MarkLineData d1 = new MarkLineData("d1", EMarkLineType.AVERAGE);
+        // 散点图
+        // {name,type,valueIndex}
         MarkLineData d2 = new MarkLineData("d2", EMarkLineType.MAX, 20);
+        // 地图
+        // [{name,value},{name}]
         MarkLineData d3 = new MarkLineData("d3Begin", 113.7, "d3End");
+        // 折线、柱形、散点图
+        // [{name,type},{name,type}]
         MarkLineData d4 = new MarkLineData("d4Begin", EMarkLineType.MIN, "d4End", EMarkLineType.MAX);
+        // 饼图、雷达图、力导、和弦图
+        // [{name,value,x,y},{name,x,y}]
         MarkLineData d5 = new MarkLineData("d5Begin", 113.7, 20, 100, "d5End", 80, 200);
+        // 折线、柱形、K线、散点图
+        // [{name,value,xAxis,yAxis},{name,xAxis,yAxis}]
         MarkLineData d6 = new MarkLineData("d6Begin", 113.7, "周三", "2", "d6End", "周五", "3");
         data.add(d1);
-        data.add(d2);
-        data.add(d3);
+        // data.add(d2);
+        // data.add(d3);
         markLine.setData(data);
+        XYMarkLineSubData d7 = new XYMarkLineSubData("d7Begin", "周三", 2);
+        XYMarkLineSubData d8 = new XYMarkLineSubData("d7End", "周五", 3);
+        data2.add(d7);
+        data2.add(d8);
         System.out.println(JSON.toJSONString(data));
+        // System.out.println(JSON.toJSONString(d1));
     }
 }

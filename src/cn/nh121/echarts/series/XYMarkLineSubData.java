@@ -54,7 +54,7 @@ public class XYMarkLineSubData extends AMarkLineSubData
     /**
      * @return the xAxis
      */
-    public Object getxAxis()
+    public Object getXAxis()
     {
         return xAxis;
     }
@@ -63,7 +63,7 @@ public class XYMarkLineSubData extends AMarkLineSubData
      * @param xAxis
      *            the xAxis to set
      */
-    public XYMarkLineSubData setxAxis(Object xAxis)
+    public XYMarkLineSubData setXAxis(Object xAxis)
     {
         this.xAxis = xAxis;
         return this;
@@ -72,7 +72,7 @@ public class XYMarkLineSubData extends AMarkLineSubData
     /**
      * @return the yAxis
      */
-    public Object getyAxis()
+    public Object getYAxis()
     {
         return yAxis;
     }
@@ -81,7 +81,7 @@ public class XYMarkLineSubData extends AMarkLineSubData
      * @param yAxis
      *            the yAxis to set
      */
-    public XYMarkLineSubData setyAxis(Object yAxis)
+    public XYMarkLineSubData setYAxis(Object yAxis)
     {
         this.yAxis = yAxis;
         return this;
