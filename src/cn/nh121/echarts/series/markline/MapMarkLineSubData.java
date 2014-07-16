@@ -1,20 +1,22 @@
 /**
  * 
  */
-package cn.nh121.echarts.series;
+package cn.nh121.echarts.series.markline;
 
 /**
  * @author ODMark
- * @creation 2014-7-12
+ * @creation 2014-7-14
  */
-public class MapMarkPointData extends AMarkPointData
+public class MapMarkLineSubData extends AMarkLineSubData
 {
     private Number value;
 
-    /**
-     * @param value
-     */
-    public MapMarkPointData(String name, Number value)
+    public MapMarkLineSubData(String name)
+    {
+        super(name);
+    }
+
+    public MapMarkLineSubData(String name, Number value)
     {
         super(name);
         this.value = value;
@@ -32,7 +34,7 @@ public class MapMarkPointData extends AMarkPointData
      * @param value
      *            the value to set
      */
-    public MapMarkPointData setValue(Number value)
+    public MapMarkLineSubData setValue(Number value)
     {
         this.value = value;
         return this;

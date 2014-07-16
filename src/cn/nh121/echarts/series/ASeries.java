@@ -2,6 +2,8 @@ package cn.nh121.echarts.series;
 
 import java.util.ArrayList;
 
+import cn.nh121.echarts.series.markline.MarkLine;
+import cn.nh121.echarts.series.markpoint.MarkPoint;
 import cn.nh121.echarts.style.ItemStyle;
 import cn.nh121.echarts.tooltip.Tooltip;
 
@@ -84,5 +86,131 @@ public abstract class ASeries
      * {}
      */
     private MarkLine               markLine;
+
+    /**
+     * @return the name
+     */
+    public String getName()
+    {
+        return name;
+    }
+
+    /**
+     * @param name
+     *            the name to set
+     */
+    public ASeries setName(String name)
+    {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * @return the tooltip
+     */
+    public Tooltip getTooltip()
+    {
+        return tooltip;
+    }
+
+    /**
+     * @param tooltip
+     *            the tooltip to set
+     */
+    public ASeries setTooltip(Tooltip tooltip)
+    {
+        this.tooltip = tooltip;
+        return this;
+    }
+
+    /**
+     * @return the type
+     */
+    public ESeriesType getType()
+    {
+        return type;
+    }
+
+    /**
+     * @param type
+     *            the type to set
+     */
+    public ASeries setType(ESeriesType type)
+    {
+        this.type = type;
+        return this;
+    }
+
+    /**
+     * @return the itemStyle
+     */
+    public ItemStyle getItemStyle()
+    {
+        return itemStyle;
+    }
+
+    /**
+     * @param itemStyle
+     *            the itemStyle to set
+     */
+    public ASeries setItemStyle(ItemStyle itemStyle)
+    {
+        this.itemStyle = itemStyle;
+        return this;
+    }
+
+    /**
+     * @return the data
+     */
+    public ArrayList<ASeriesData> getData()
+    {
+        return data;
+    }
+
+    /**
+     * @param data
+     *            the data to set
+     */
+    public ASeries setData(ArrayList<ASeriesData> data)
+    {
+        this.data = data;
+        return this;
+    }
+
+    /**
+     * @return the markPoint
+     */
+    public MarkPoint getMarkPoint()
+    {
+        return markPoint;
+    }
+
+    /**
+     * @param markPoint
+     *            the markPoint to set
+     */
+    public ASeries setMarkPoint(MarkPoint markPoint)
+    {
+        this.markPoint = markPoint;
+        return this;
+    }
+
+    /**
+     * @return the markLine
+     */
+    public MarkLine getMarkLine()
+    {
+        return markLine;
+    }
+
+    /**
+     * @param markLine
+     *            the markLine to set
+     */
+    public ASeries setMarkLine(MarkLine markLine)
+    {
+        this.markLine = markLine;
+        return this;
+    }
 
 }

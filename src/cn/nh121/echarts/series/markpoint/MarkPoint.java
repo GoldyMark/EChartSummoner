@@ -1,67 +1,69 @@
 /**
  * 
  */
-package cn.nh121.echarts.series;
+package cn.nh121.echarts.series.markpoint;
 
 import java.util.ArrayList;
 
 import cn.nh121.echarts.pubenum.ESymbol;
+import cn.nh121.echarts.series.GeoCoord;
+import cn.nh121.echarts.series.SeriesEffect;
 import cn.nh121.echarts.style.ItemStyle;
 
 /**
- * 系列中的数据标线内容
+ * 系列中的数据标注内容
  * 
  * @author ODMark
- * @creation 2014-7-13
- * @link http://echarts.baidu.com/doc/doc.html#SeriesMarkLine
+ * @creation 2014-7-12
+ * @link http://echarts.baidu.com/doc/doc.html#SeriesMarkPoint
  */
-public class MarkLine
+public class MarkPoint
 {
     /**
      * 说明：
-     * 标线的平滑度<br>
+     * 标注类型，同series中的symbol<br>
      * 
      * 默认值：
-     * FALSE
+     * 'pin'
      */
-    private Boolean                 smooth;
+    private ESymbol                   symbol;
 
     /**
      * 说明：
-     * 标线起始和结束的symbol介绍类型，如果都一样，可以直接传string，同series中的symbol<br>
+     * 标注大小，同series中的symbolSize<br>
      * 
      * 默认值：
-     * ['circle', 'arrow']
+     * 10
      */
-    private ESymbol[]               symbol;
+    private Object                    symbolSize;
 
     /**
      * 说明：
-     * 标线起始和结束的symbol大小，半宽（半径）参数，如果都一样，可以直接传number或function，同series中的symbolSize<br>
-     * 
-     * 默认值：
-     * [2, 4]
-     */
-    private Object[]                symbolSize;
-
-    /**
-     * 说明：
-     * 标线起始和结束的symbol旋转控制，同series中的symbolRotate<br>
+     * 标注图形旋转角度，同series中的symbolRotate<br>
      * 
      * 默认值：
      * null
      */
-    private Integer[]               symbolRotate;
+    private Integer                   symbolRotate;
 
     /**
      * 说明：
-     * 标线图形炫光特效:
+     * 是否启动大规模标注模式<br>
+     * 
+     * 默认值：
+     * FALSE
+     */
+    private Boolean                   large;
+
+    /**
+     * 说明：
+     * 标注图形炫光特效:
      * show 是否开启，默认关闭
      * period 运动周期，无单位，值越大越慢，默认为15
-     * scaleSize 放大倍数，以markLine lineWidth为基准
-     * color 炫光颜色，默认跟随markLine itemStyle定义颜色,
+     * scaleSize 放大倍数，以markPoint symbolSize为基准
+     * color 炫光颜色，默认跟随markPoint itemStyle定义颜色,
      * shadowColor 光影颜色，默认跟随color
-     * shadowBlur 光影模糊度，默认根据scaleSize计算 <br>
+     * shadowBlur 光影模糊度，默认为0 <br>
      * 
      * 默认值：
      * {
@@ -70,60 +72,42 @@ public class MarkLine
      * scaleSize : 2,
      * color : null,
      * shadowColor : null,
-     * shadowBlur : null
+     * shadowBlur : 0
      * }
      */
-    private SeriesEffect            effect;
+    private SeriesEffect              effect;
 
     /**
      * 说明：
-     * 标线图形样式属性，同series中的itemStyle<br>
+     * 标注图形样式属性，同series中的itemStyle<br>
      * 
      * 默认值：
      * {...}
      */
-    private ItemStyle               itemStyle;
+    private ItemStyle                 itemStyle;
 
     /**
      * 说明：
-     * 地图特有，标线图形定位坐标，同series中的geoCoord<br>
+     * 地图特有，标注图形定位坐标，同series中的geoCoord<br>
      * 
      * 默认值：
      * {}
      */
-    private GeoCoord                geoCoord;
+    private GeoCoord                  geoCoord;
 
     /**
      * 说明：
-     * 标线图形数据，见下<br>
+     * 标注图形数据，见下<br>
      * 
      * 默认值：
      * []
      */
-    private ArrayList<MarkLineData> data;
-
-    /**
-     * @return the smooth
-     */
-    public Boolean getSmooth()
-    {
-        return smooth;
-    }
-
-    /**
-     * @param smooth
-     *            the smooth to set
-     */
-    public MarkLine setSmooth(Boolean smooth)
-    {
-        this.smooth = smooth;
-        return this;
-    }
+    private ArrayList<AMarkPointData> data;
 
     /**
      * @return the symbol
      */
-    public ESymbol[] getSymbol()
+    public ESymbol getSymbol()
     {
         return symbol;
     }
@@ -132,7 +116,7 @@ public class MarkLine
      * @param symbol
      *            the symbol to set
      */
-    public MarkLine setSymbol(ESymbol[] symbol)
+    public MarkPoint setSymbol(ESymbol symbol)
     {
         this.symbol = symbol;
         return this;
@@ -141,7 +125,7 @@ public class MarkLine
     /**
      * @return the symbolSize
      */
-    public Object[] getSymbolSize()
+    public Object getSymbolSize()
     {
         return symbolSize;
     }
@@ -150,7 +134,7 @@ public class MarkLine
      * @param symbolSize
      *            the symbolSize to set
      */
-    public MarkLine setSymbolSize(Object[] symbolSize)
+    public MarkPoint setSymbolSize(Object symbolSize)
     {
         this.symbolSize = symbolSize;
         return this;
@@ -159,7 +143,7 @@ public class MarkLine
     /**
      * @return the symbolRotate
      */
-    public Integer[] getSymbolRotate()
+    public Integer getSymbolRotate()
     {
         return symbolRotate;
     }
@@ -168,9 +152,27 @@ public class MarkLine
      * @param symbolRotate
      *            the symbolRotate to set
      */
-    public MarkLine setSymbolRotate(Integer[] symbolRotate)
+    public MarkPoint setSymbolRotate(Integer symbolRotate)
     {
         this.symbolRotate = symbolRotate;
+        return this;
+    }
+
+    /**
+     * @return the large
+     */
+    public Boolean getLarge()
+    {
+        return large;
+    }
+
+    /**
+     * @param large
+     *            the large to set
+     */
+    public MarkPoint setLarge(Boolean large)
+    {
+        this.large = large;
         return this;
     }
 
@@ -186,7 +188,7 @@ public class MarkLine
      * @param effect
      *            the effect to set
      */
-    public MarkLine setEffect(SeriesEffect effect)
+    public MarkPoint setEffect(SeriesEffect effect)
     {
         this.effect = effect;
         return this;
@@ -204,7 +206,7 @@ public class MarkLine
      * @param itemStyle
      *            the itemStyle to set
      */
-    public MarkLine setItemStyle(ItemStyle itemStyle)
+    public MarkPoint setItemStyle(ItemStyle itemStyle)
     {
         this.itemStyle = itemStyle;
         return this;
@@ -222,7 +224,7 @@ public class MarkLine
      * @param geoCoord
      *            the geoCoord to set
      */
-    public MarkLine setGeoCoord(GeoCoord geoCoord)
+    public MarkPoint setGeoCoord(GeoCoord geoCoord)
     {
         this.geoCoord = geoCoord;
         return this;
@@ -231,7 +233,7 @@ public class MarkLine
     /**
      * @return the data
      */
-    public ArrayList<MarkLineData> getData()
+    public ArrayList<AMarkPointData> getData()
     {
         return data;
     }
@@ -240,9 +242,10 @@ public class MarkLine
      * @param data
      *            the data to set
      */
-    public MarkLine setData(ArrayList<MarkLineData> data)
+    public MarkPoint setData(ArrayList<AMarkPointData> data)
     {
         this.data = data;
         return this;
     }
+
 }

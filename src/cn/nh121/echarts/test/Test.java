@@ -2,7 +2,7 @@ package cn.nh121.echarts.test;
 
 import java.util.ArrayList;
 
-import cn.nh121.echarts.series.XYMarkLineSubData;
+import cn.nh121.echarts.series.markline.XYMarkLineSubData;
 
 import com.alibaba.fastjson.JSON;
 

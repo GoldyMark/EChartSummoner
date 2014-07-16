@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cn.nh121.echarts.series;
+package cn.nh121.echarts.series.markline;
 
 import java.util.ArrayList;
 

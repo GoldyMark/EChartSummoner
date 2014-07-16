@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 import cn.nh121.echarts.core.EColor;
 import cn.nh121.echarts.core.JSFunction;
-import cn.nh121.echarts.series.EMarkLineType;
-import cn.nh121.echarts.series.MarkLine;
-import cn.nh121.echarts.series.MarkLineData;
-import cn.nh121.echarts.series.XYMarkLineSubData;
+import cn.nh121.echarts.series.markline.EMarkLineType;
+import cn.nh121.echarts.series.markline.MarkLine;
+import cn.nh121.echarts.series.markline.MarkLineData;
+import cn.nh121.echarts.series.markline.XYMarkLineSubData;
 import cn.nh121.echarts.style.LineStyle;
 import cn.nh121.echarts.style.LineStyle.ELineType;
 import cn.nh121.echarts.toolbox.feature.DataView;

@@ -1,28 +1,29 @@
 /**
  * 
  */
-package cn.nh121.echarts.series;
+package cn.nh121.echarts.series.markline;
 
 /**
  * @author ODMark
- * @creation 2014-7-12
+ * @creation 2014-7-14
  */
-public class FlatMarkPointData extends AMarkPointData
+public class FlatMarkLineSubData extends AMarkLineSubData
 {
     private Number  value;
     private Integer x;
     private Integer y;
 
-    /**
-     * @param name
-     * @param value
-     * @param x
-     * @param y
-     */
-    public FlatMarkPointData(String name, Number value, Integer x, Integer y)
+    public FlatMarkLineSubData(String name, Number value, Integer x, Integer y)
     {
         super(name);
         this.value = value;
+        this.x = x;
+        this.y = y;
+    }
+
+    public FlatMarkLineSubData(String name, Integer x, Integer y)
+    {
+        super(name);
         this.x = x;
         this.y = y;
     }
@@ -39,7 +40,7 @@ public class FlatMarkPointData extends AMarkPointData
      * @param value
      *            the value to set
      */
-    public FlatMarkPointData setValue(Number value)
+    public FlatMarkLineSubData setValue(Number value)
     {
         this.value = value;
         return this;
@@ -57,7 +58,7 @@ public class FlatMarkPointData extends AMarkPointData
      * @param x
      *            the x to set
      */
-    public FlatMarkPointData setX(Integer x)
+    public FlatMarkLineSubData setX(Integer x)
     {
         this.x = x;
         return this;
@@ -75,7 +76,7 @@ public class FlatMarkPointData extends AMarkPointData
      * @param y
      *            the y to set
      */
-    public FlatMarkPointData setY(Integer y)
+    public FlatMarkLineSubData setY(Integer y)
     {
         this.y = y;
         return this;

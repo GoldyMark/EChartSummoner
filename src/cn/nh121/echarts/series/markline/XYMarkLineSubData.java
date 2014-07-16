@@ -1,4 +1,4 @@
-package cn.nh121.echarts.series;
+package cn.nh121.echarts.series.markline;
 
 public class XYMarkLineSubData extends AMarkLineSubData
 {
