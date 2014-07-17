@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import cn.nh121.echarts.core.EColor;
 import cn.nh121.echarts.core.JSFunction;
+import cn.nh121.echarts.series.EMapType;
 import cn.nh121.echarts.series.markline.EMarkLineType;
 import cn.nh121.echarts.series.markline.MarkLine;
 import cn.nh121.echarts.series.markline.MarkLineData;
@@ -84,7 +85,7 @@ public class JSFunctionKit
         System.out.println(JSON.toJSONString(feature));
     }
 
-    public static void main(String[] args)
+    public static void main3(String[] args)
     {
         // Polar polar = new Polar();
         // // Object[] objs = { "A", "B" };
@@ -121,5 +122,10 @@ public class JSFunctionKit
         data2.add(d8);
         System.out.println(JSON.toJSONString(data));
         // System.out.println(JSON.toJSONString(d1));
+    }
+
+    public static void main(String[] args)
+    {
+        System.out.println(new EMapType("world", "china"));
     }
 }

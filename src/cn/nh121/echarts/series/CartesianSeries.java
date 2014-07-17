@@ -2,7 +2,7 @@ package cn.nh121.echarts.series;
 
 import cn.nh121.echarts.pubenum.ESymbol;
 
-public class SeriesCartesian extends ASeries
+public class CartesianSeries extends ASeries
 {
     /**
      * 类型： 折线图，柱状图
@@ -178,7 +178,7 @@ public class SeriesCartesian extends ASeries
      * @param stack
      *            the stack to set
      */
-    public SeriesCartesian setStack(String stack)
+    public CartesianSeries setStack(String stack)
     {
         this.stack = stack;
         return this;
@@ -196,7 +196,7 @@ public class SeriesCartesian extends ASeries
      * @param xAxisIndex
      *            the xAxisIndex to set
      */
-    public SeriesCartesian setxAxisIndex(EXAxisIndex xAxisIndex)
+    public CartesianSeries setxAxisIndex(EXAxisIndex xAxisIndex)
     {
         this.xAxisIndex = xAxisIndex;
         return this;
@@ -214,7 +214,7 @@ public class SeriesCartesian extends ASeries
      * @param barGap
      *            the barGap to set
      */
-    public SeriesCartesian setBarGap(Object barGap)
+    public CartesianSeries setBarGap(Object barGap)
     {
         this.barGap = barGap;
         return this;
@@ -232,7 +232,7 @@ public class SeriesCartesian extends ASeries
      * @param barCategoryGap
      *            the barCategoryGap to set
      */
-    public SeriesCartesian setBarCategoryGap(Object barCategoryGap)
+    public CartesianSeries setBarCategoryGap(Object barCategoryGap)
     {
         this.barCategoryGap = barCategoryGap;
         return this;
@@ -250,7 +250,7 @@ public class SeriesCartesian extends ASeries
      * @param barMinHeight
      *            the barMinHeight to set
      */
-    public SeriesCartesian setBarMinHeight(Integer barMinHeight)
+    public CartesianSeries setBarMinHeight(Integer barMinHeight)
     {
         this.barMinHeight = barMinHeight;
         return this;
@@ -268,7 +268,7 @@ public class SeriesCartesian extends ASeries
      * @param barWidth
      *            the barWidth to set
      */
-    public SeriesCartesian setBarWidth(Integer barWidth)
+    public CartesianSeries setBarWidth(Integer barWidth)
     {
         this.barWidth = barWidth;
         return this;
@@ -286,7 +286,7 @@ public class SeriesCartesian extends ASeries
      * @param barMaxWidth
      *            the barMaxWidth to set
      */
-    public SeriesCartesian setBarMaxWidth(Integer barMaxWidth)
+    public CartesianSeries setBarMaxWidth(Integer barMaxWidth)
     {
         this.barMaxWidth = barMaxWidth;
         return this;
@@ -304,7 +304,7 @@ public class SeriesCartesian extends ASeries
      * @param symbol
      *            the symbol to set
      */
-    public SeriesCartesian setSymbol(ESymbol symbol)
+    public CartesianSeries setSymbol(ESymbol symbol)
     {
         this.symbol = symbol;
         return this;
@@ -322,7 +322,7 @@ public class SeriesCartesian extends ASeries
      * @param symbolSize
      *            the symbolSize to set
      */
-    public SeriesCartesian setSymbolSize(Object symbolSize)
+    public CartesianSeries setSymbolSize(Object symbolSize)
     {
         this.symbolSize = symbolSize;
         return this;
@@ -340,7 +340,7 @@ public class SeriesCartesian extends ASeries
      * @param symbolRotate
      *            the symbolRotate to set
      */
-    public SeriesCartesian setSymbolRotate(Integer symbolRotate)
+    public CartesianSeries setSymbolRotate(Integer symbolRotate)
     {
         this.symbolRotate = symbolRotate;
         return this;
@@ -358,7 +358,7 @@ public class SeriesCartesian extends ASeries
      * @param showAllSymbol
      *            the showAllSymbol to set
      */
-    public SeriesCartesian setShowAllSymbol(Boolean showAllSymbol)
+    public CartesianSeries setShowAllSymbol(Boolean showAllSymbol)
     {
         this.showAllSymbol = showAllSymbol;
         return this;
@@ -376,7 +376,7 @@ public class SeriesCartesian extends ASeries
      * @param smooth
      *            the smooth to set
      */
-    public SeriesCartesian setSmooth(Boolean smooth)
+    public CartesianSeries setSmooth(Boolean smooth)
     {
         this.smooth = smooth;
         return this;
@@ -394,7 +394,7 @@ public class SeriesCartesian extends ASeries
      * @param large
      *            the large to set
      */
-    public SeriesCartesian setLarge(Boolean large)
+    public CartesianSeries setLarge(Boolean large)
     {
         this.large = large;
         return this;
@@ -412,7 +412,7 @@ public class SeriesCartesian extends ASeries
      * @param largeThreshold
      *            the largeThreshold to set
      */
-    public SeriesCartesian setLargeThreshold(Integer largeThreshold)
+    public CartesianSeries setLargeThreshold(Integer largeThreshold)
     {
         this.largeThreshold = largeThreshold;
         return this;
