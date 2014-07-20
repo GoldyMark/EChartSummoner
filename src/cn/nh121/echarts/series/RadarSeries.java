@@ -2,6 +2,12 @@ package cn.nh121.echarts.series;
 
 import cn.nh121.echarts.pubenum.ESymbol;
 
+/**
+ * 
+ * @author ODMark
+ * @creation 2014-7-19
+ * @link http://echarts.baidu.com/doc/doc.html#SeriesRadar
+ */
 public class RadarSeries extends ASeries
 {
     /**

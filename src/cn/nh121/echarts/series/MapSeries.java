@@ -2,6 +2,11 @@ package cn.nh121.echarts.series;
 
 import java.util.Map;
 
+/**
+ * @author ODMark
+ * @creation 2014-7-19
+ * @link http://echarts.baidu.com/doc/doc.html#SeriesMap
+ */
 public class MapSeries extends ASeries
 {
     /**
@@ -25,7 +30,7 @@ public class MapSeries extends ASeries
      * 默认值：
      * 'china'
      */
-    private EMapType               mapType;
+    private String                 mapType;
 
     /**
      * 说明：
@@ -117,5 +122,239 @@ public class MapSeries extends ASeries
      * null
      */
     private Map<String, Number[]>  geoCoord;
+
+    /**
+     * @return the selectedMode
+     */
+    public ESeriesSelectedMode getSelectedMode()
+    {
+        return selectedMode;
+    }
+
+    /**
+     * @param selectedMode
+     *            the selectedMode to set
+     */
+    public MapSeries setSelectedMode(ESeriesSelectedMode selectedMode)
+    {
+        this.selectedMode = selectedMode;
+        return this;
+    }
+
+    /**
+     * @return the mapType
+     */
+    public String getMapType()
+    {
+        return mapType;
+    }
+
+    /**
+     * @param mapType
+     *            the mapType to set
+     */
+    public MapSeries setMapType(String mapType)
+    {
+        this.mapType = mapType;
+        return this;
+    }
+
+    /**
+     * @return the hoverable
+     */
+    public Boolean getHoverable()
+    {
+        return hoverable;
+    }
+
+    /**
+     * @param hoverable
+     *            the hoverable to set
+     */
+    public MapSeries setHoverable(Boolean hoverable)
+    {
+        this.hoverable = hoverable;
+        return this;
+    }
+
+    /**
+     * @return the mapLocation
+     */
+    public MapLocation getMapLocation()
+    {
+        return mapLocation;
+    }
+
+    /**
+     * @param mapLocation
+     *            the mapLocation to set
+     */
+    public MapSeries setMapLocation(MapLocation mapLocation)
+    {
+        this.mapLocation = mapLocation;
+        return this;
+    }
+
+    /**
+     * @return the mapValueCalculation
+     */
+    public EMapValueCalculation getMapValueCalculation()
+    {
+        return mapValueCalculation;
+    }
+
+    /**
+     * @param mapValueCalculation
+     *            the mapValueCalculation to set
+     */
+    public MapSeries setMapValueCalculation(EMapValueCalculation mapValueCalculation)
+    {
+        this.mapValueCalculation = mapValueCalculation;
+        return this;
+    }
+
+    /**
+     * @return the mapValuePrecision
+     */
+    public Integer getMapValuePrecision()
+    {
+        return mapValuePrecision;
+    }
+
+    /**
+     * @param mapValuePrecision
+     *            the mapValuePrecision to set
+     */
+    public MapSeries setMapValuePrecision(Integer mapValuePrecision)
+    {
+        this.mapValuePrecision = mapValuePrecision;
+        return this;
+    }
+
+    /**
+     * @return the showLegendSymbol
+     */
+    public Boolean getShowLegendSymbol()
+    {
+        return showLegendSymbol;
+    }
+
+    /**
+     * @param showLegendSymbol
+     *            the showLegendSymbol to set
+     */
+    public MapSeries setShowLegendSymbol(Boolean showLegendSymbol)
+    {
+        this.showLegendSymbol = showLegendSymbol;
+        return this;
+    }
+
+    /**
+     * @return the roam
+     */
+    public Boolean getRoam()
+    {
+        return roam;
+    }
+
+    /**
+     * @param roam
+     *            the roam to set
+     */
+    public MapSeries setRoam(Boolean roam)
+    {
+        this.roam = roam;
+        return this;
+    }
+
+    /**
+     * @return the scaleLimit
+     */
+    public ScaleLimit getScaleLimit()
+    {
+        return scaleLimit;
+    }
+
+    /**
+     * @param scaleLimit
+     *            the scaleLimit to set
+     */
+    public MapSeries setScaleLimit(ScaleLimit scaleLimit)
+    {
+        this.scaleLimit = scaleLimit;
+        return this;
+    }
+
+    /**
+     * @return the nameMap
+     */
+    public Map<String, String> getNameMap()
+    {
+        return nameMap;
+    }
+
+    /**
+     * @param nameMap
+     *            the nameMap to set
+     */
+    public MapSeries setNameMap(Map<String, String> nameMap)
+    {
+        this.nameMap = nameMap;
+        return this;
+    }
+
+    public MapSeries addNameToMap(String name, String label)
+    {
+        this.nameMap.put(name, label);
+        return this;
+    }
+
+    /**
+     * @return the textFixed
+     */
+    public Map<String, Integer[]> getTextFixed()
+    {
+        return textFixed;
+    }
+
+    /**
+     * @param textFixed
+     *            the textFixed to set
+     */
+    public MapSeries setTextFixed(Map<String, Integer[]> textFixed)
+    {
+        this.textFixed = textFixed;
+        return this;
+    }
+
+    public MapSeries addTextFixedToMap(String name, Integer xOffset, Integer yOffset)
+    {
+        this.textFixed.put(name, new Integer[] { xOffset, yOffset });
+        return this;
+    }
+
+    /**
+     * @return the geoCoord
+     */
+    public Map<String, Number[]> getGeoCoord()
+    {
+        return geoCoord;
+    }
+
+    /**
+     * @param geoCoord
+     *            the geoCoord to set
+     */
+    public MapSeries setGeoCoord(Map<String, Number[]> geoCoord)
+    {
+        this.geoCoord = geoCoord;
+        return this;
+    }
+
+    public MapSeries addGeoCoordToMap(String name, Number longitude, Number latitude)
+    {
+        this.geoCoord.put(name, new Number[] { longitude, latitude });
+        return this;
+    }
 
 }

@@ -1,6 +1,6 @@
 package cn.nh121.echarts.kit;
 
-public class IntegerRangeCheckKit
+public class NumberKit
 {
     public static Boolean checkRange(Integer num, Integer min, Integer max, Boolean throwException)
     {
@@ -27,5 +27,16 @@ public class IntegerRangeCheckKit
     public static Boolean checkMax(Integer num, Integer max, Boolean throwException)
     {
         return checkRange(num, null, max, throwException);
+    }
+
+    public static Object stringOrNum(String num)
+    {
+        try
+        {
+            return Double.valueOf(num).intValue();
+        } catch (Exception e)
+        {
+            return num;
+        }
     }
 }

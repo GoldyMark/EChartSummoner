@@ -2,6 +2,12 @@ package cn.nh121.echarts.series;
 
 import cn.nh121.echarts.pubenum.ESymbol;
 
+/**
+ * 
+ * @author ODMark
+ * @creation 2014-7-19
+ * @link http://echarts.baidu.com/doc/doc.html#SeriesCartesian
+ */
 public class CartesianSeries extends ASeries
 {
     /**
@@ -91,7 +97,8 @@ public class CartesianSeries extends ASeries
      * 'circle' | 'rectangle' | 'triangle' | 'diamond' |
      * 'emptyCircle' | 'emptyRectangle' | 'emptyTriangle' | 'emptyDiamond'
      * 另外，还支持五种更特别的标志图形
-     * 'heart'（心形）、'droplet'（水滴）、'pin'（标注）、'arrow'（箭头）和'star'（五角星），这并不出现在常规的8类图形中，但无论是在系列级还是数据级上你都可以指定使用，同时，'s
+     * 'heart'（心形）、'droplet'（水滴）、'pin'（标注）、'arrow'（箭头）和'star'（五角星），这并不出现在常规的8类图形中，但无论是在系列级还是数据级上你都可以指定使用，同时，'
+     * s
      * t
      * a
      * r

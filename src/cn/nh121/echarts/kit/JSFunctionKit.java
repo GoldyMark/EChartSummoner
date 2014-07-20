@@ -1,10 +1,11 @@
 package cn.nh121.echarts.kit;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import cn.nh121.echarts.core.EColor;
 import cn.nh121.echarts.core.JSFunction;
-import cn.nh121.echarts.series.EMapType;
 import cn.nh121.echarts.series.markline.EMarkLineType;
 import cn.nh121.echarts.series.markline.MarkLine;
 import cn.nh121.echarts.series.markline.MarkLineData;
@@ -126,6 +127,9 @@ public class JSFunctionKit
 
     public static void main(String[] args)
     {
-        System.out.println(new EMapType("world", "china"));
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        map.put(111, 1);
+        map.put(222, 2);
+        System.out.println(JSON.toJSONString(map));
     }
 }

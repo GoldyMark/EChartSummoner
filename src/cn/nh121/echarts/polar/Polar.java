@@ -2,7 +2,7 @@ package cn.nh121.echarts.polar;
 
 import java.util.ArrayList;
 
-import cn.nh121.echarts.kit.IntegerRangeCheckKit;
+import cn.nh121.echarts.kit.NumberKit;
 
 /**
  * 
@@ -197,7 +197,7 @@ public class Polar
      */
     public Polar setStartAngle(Integer startAngle)
     {
-        IntegerRangeCheckKit.checkRange(startAngle, -180, 180, true);
+        NumberKit.checkRange(startAngle, -180, 180, true);
         this.startAngle = startAngle;
         return this;
     }
@@ -216,7 +216,7 @@ public class Polar
      */
     public Polar setSplitNumber(Integer splitNumber)
     {
-        IntegerRangeCheckKit.checkMin(splitNumber, 0, true);
+        NumberKit.checkMin(splitNumber, 0, true);
         this.splitNumber = splitNumber;
         return this;
     }

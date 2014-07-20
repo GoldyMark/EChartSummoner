@@ -1,5 +1,11 @@
 package cn.nh121.echarts.series;
 
+/**
+ * 
+ * @author ODMark
+ * @creation 2014-7-19
+ * @link http://echarts.baidu.com/doc/doc.html#SeriesPie
+ */
 public class PieSeries extends ASeries
 {
     /**
@@ -9,7 +15,7 @@ public class PieSeries extends ASeries
      * 默认值：
      * ['50%', '50%']
      */
-    private String[]               center;
+    private String[]            center;
 
     /**
      * 说明：
@@ -18,7 +24,7 @@ public class PieSeries extends ASeries
      * 默认值：
      * [0, '75%']
      */
-    private Object                 radius;
+    private Object              radius;
 
     /**
      * 说明：
@@ -27,7 +33,7 @@ public class PieSeries extends ASeries
      * 默认值：
      * 90
      */
-    private Integer                startAngle;
+    private Integer             startAngle;
 
     /**
      * 说明：
@@ -36,7 +42,7 @@ public class PieSeries extends ASeries
      * 默认值：
      * 0
      */
-    private Integer                minAngle;
+    private Integer             minAngle;
 
     /**
      * 说明：
@@ -45,7 +51,7 @@ public class PieSeries extends ASeries
      * 默认值：
      * TRUE
      */
-    private Boolean                clockWise;
+    private Boolean             clockWise;
 
     /**
      * 说明：
@@ -54,7 +60,7 @@ public class PieSeries extends ASeries
      * 默认值：
      * null
      */
-    private ERoseType              roseType;
+    private ERoseType           roseType;
 
     /**
      * 说明：
@@ -63,7 +69,7 @@ public class PieSeries extends ASeries
      * 默认值：
      * 10
      */
-    private Integer                selectedOffset;
+    private Integer             selectedOffset;
 
     /**
      * 说明：
